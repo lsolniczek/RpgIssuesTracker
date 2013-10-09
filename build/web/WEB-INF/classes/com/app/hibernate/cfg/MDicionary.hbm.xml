@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-07-03 23:10:06 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.app.entity.MDicionary" schema="public" table="m_dicionary">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence"/>
+    </id>
+    <property name="chValue" type="string">
+      <column name="ch_value"/>
+    </property>
+    <property name="chType" type="string">
+      <column name="ch_type"/>
+    </property>
+    <property name="dtCreatedate" type="date">
+      <column length="13" name="dt_createdate"/>
+    </property>
+    <property name="chItem1" type="string">
+      <column name="ch_item1"/>
+    </property> 
+  </class>
+</hibernate-mapping>

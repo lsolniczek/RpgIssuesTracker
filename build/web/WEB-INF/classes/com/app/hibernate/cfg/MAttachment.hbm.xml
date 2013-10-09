@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-07-03 23:10:06 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.app.entity.MAttachment" schema="public" table="m_attachment">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence"/>
+    </id>
+    <property name="chName" type="string">
+      <column name="ch_name"/>
+    </property>
+    <property name="chBinaryvalue" type="binary">
+      <column name="ch_binaryvalue"/>
+    </property>
+    <property name="dtCreatedate" type="date">
+      <column length="13" name="dt_createdate"/>
+    </property>
+  </class>
+</hibernate-mapping>

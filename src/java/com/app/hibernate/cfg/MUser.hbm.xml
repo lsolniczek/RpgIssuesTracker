@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-07-03 23:10:06 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.app.entity.MUser" schema="public" table="m_user">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="native"/>
+    </id>
+    <property name="chName" type="string">
+      <column name="ch_name"/>
+    </property>
+    <property name="chLastname" type="string">
+      <column name="ch_lastname"/>
+    </property>
+    <property name="chLogin" type="string">
+      <column name="ch_login"/>
+    </property>
+    <property name="chPassword" type="string">
+      <column name="ch_password"/>
+    </property>
+    <property name="chEmail" type="string">
+      <column name="ch_email"/>
+    </property>
+    <property name="dtInsertdate" type="date">
+      <column length="13" name="dt_insertdate"/>
+    </property>
+   </class>
+</hibernate-mapping>

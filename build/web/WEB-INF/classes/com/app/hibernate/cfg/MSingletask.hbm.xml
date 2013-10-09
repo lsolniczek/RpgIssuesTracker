@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-07-03 23:10:06 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.app.entity.MSingletask" schema="public" table="m_singletask">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence"/>
+    </id>
+    <many-to-one class="com.app.entity.MDicionary" fetch="select" name="MDicionaryBySiProject">
+      <column name="si_project"/>
+    </many-to-one>
+    <many-to-one class="com.app.entity.MDicionary" fetch="select" name="MDicionaryBySiIssuesize">
+      <column name="si_issuesize"/>
+    </many-to-one>
+    <many-to-one class="com.app.entity.MAttachment" fetch="select" name="MAttachment">
+      <column name="si_attachment"/>
+    </many-to-one>
+    <many-to-one class="com.app.entity.MUser" fetch="select" cascade="all" name="MUserBySiExecutor">
+      <column name="si_executor"/>
+    </many-to-one>
+    <many-to-one class="com.app.entity.MDicionary" fetch="select" name="MDicionaryBySiPriority">
+      <column name="si_priority"/>
+    </many-to-one>
+    <many-to-one class="com.app.entity.MUser" fetch="select" cascade="all" name="MUserBySiAuthor">
+      <column name="si_author"/>
+    </many-to-one>
+    <many-to-one class="com.app.entity.MDicionary" fetch="select" name="MDicionaryBySiIssuetype">
+      <column name="si_issuetype"/>
+    </many-to-one>
+    <property name="chTitle" type="string">
+      <column name="ch_title"/>
+    </property>
+    <property name="chDescription" type="string">
+      <column name="ch_description"/>
+    </property>
+    <property name="chAddinfo" type="string">
+      <column name="ch_addinfo"/>
+    </property>
+    <property name="dtCreatedate" type="date">
+      <column length="13" name="dt_createdate"/>
+    </property>
+    <property name="dtFinishdate" type="date">
+      <column length="13" name="dt_finishdate"/>
+    </property>
+    <property name="chTasknumber" type="string">
+      <column name="ch_tasknumber"/>
+    </property>
+  </class>
+</hibernate-mapping>
